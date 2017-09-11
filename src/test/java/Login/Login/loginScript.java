@@ -20,14 +20,23 @@ public class loginScript {
 
 	@BeforeTest
 	public void loadUrl() {
-		System.setProperty("webdriver.chrome.driver",
-				"drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+		String os = System.getProperty("os.name").toLowerCase();
+		System.out.println("Operating system: " + os);
+
+		if (os.contains("linux")) {
+			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_linux");
+			driver = new ChromeDriver();
+		} else if (os.contains("windows")) {
+			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+
 		driver.get(baseUrl);
 	}
 
 	@Test
 	public void enterCredentials() throws InterruptedException {
+
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		List<WebElement> logout = driver.findElements(By.xpath("//input[@name='Logout']"));
 		if (logout.size() > 0) {
