@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="4508" started-at="2017-09-11T06:00:11Z" finished-at="2017-09-11T06:00:16Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="4508" started-at="2017-09-11T06:00:11Z" finished-at="2017-09-11T06:00:16Z">
+      <class name="Login.Login.loginScript">
+        <test-method status="PASS" signature="loadUrl()[pri:0, instance:Login.Login.loginScript@3498ed]" name="loadUrl" is-config="true" duration-ms="3309" started-at="2017-09-11T11:30:11Z" finished-at="2017-09-11T11:30:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadUrl -->
+        <test-method status="PASS" signature="enterCredentials()[pri:0, instance:Login.Login.loginScript@3498ed]" name="enterCredentials" duration-ms="1102" started-at="2017-09-11T11:30:15Z" finished-at="2017-09-11T11:30:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterCredentials -->
+        <test-method status="PASS" signature="closeWindow()[pri:0, instance:Login.Login.loginScript@3498ed]" name="closeWindow" is-config="true" duration-ms="86" started-at="2017-09-11T11:30:16Z" finished-at="2017-09-11T11:30:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeWindow -->
+      </class> <!-- Login.Login.loginScript -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
