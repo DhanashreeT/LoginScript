@@ -21,7 +21,7 @@ public class loginScript {
 	@BeforeTest
 	public void loadUrl() {
 		System.setProperty("webdriver.chrome.driver",
-				"drivers/chromedriver_linux");
+				"drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(baseUrl);
 	}
