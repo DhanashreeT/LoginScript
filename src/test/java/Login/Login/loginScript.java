@@ -43,7 +43,7 @@ public class loginScript {
 			logout.get(0).click();
 		}
 		driver.findElement(By.xpath("//input[@name='fw_username']")).sendKeys("dhanashreet");
-		driver.findElement(By.xpath("//input[@name='fw_password']")).sendKeys("9096924204d");
+		driver.findElement(By.xpath("//input[@name='fw_password']")).sendKeys("9096924204dd");
 		driver.findElement(By.xpath("//input[@name='submit']")).click();
 		WebElement loginMsg = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@align='center']/b")));
