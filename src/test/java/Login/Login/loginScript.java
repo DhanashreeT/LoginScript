@@ -49,7 +49,7 @@ public class loginScript {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@align='center']/b")));
 		String successMsg = loginMsg.getText();
 
-		Assert.assertEquals(successMsg, "You have been successfully authenticated.");
+		Assert.assertEquals(successMsg, "You have been succssfully authenticated.","success message does not match");
 	}
 
 	@AfterTest
