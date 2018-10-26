@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -25,6 +26,13 @@ public class loginScript {
 
 		if (os.contains("linux")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_linux");
+			ChromeOptions options = new ChromeOptions();
+			options.setExperimentalOption("useAutomationExtension", false);
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--headless");
+
+			driver = new ChromeDriver(options);
 			driver = new ChromeDriver();
 		} else if (os.contains("windows")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
@@ -49,7 +57,7 @@ public class loginScript {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@align='center']/b")));
 		String successMsg = loginMsg.getText();
 
-		Assert.assertEquals(successMsg, "You have been succssfully authenticated.","success message does not match");
+		Assert.assertEquals(successMsg, "You have been succssfully authenticated.", "success message does not match");
 	}
 
 	@AfterTest
