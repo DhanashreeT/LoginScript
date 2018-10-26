@@ -27,17 +27,11 @@ public class loginScript {
 		if (os.contains("linux")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_linux");
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--mute-audio");
-                        options.addArguments("--dns-prefetch-disable");
-           		options.addArguments("--lang=en-US");
-            		options.addArguments("--disable-setuid-sandbox");
-				
-			options.addArguments("--headless");
-			options.addArguments("--no-sandbox");
-			
-                        
+			options.addArguments("–no-sandbox");
+			options.addArguments("–disable-dev-shm-usage");
+			options.setExperimentalOption("useAutomationExtension", false);
 			driver = new ChromeDriver(options);
-			driver = new ChromeDriver();
+			
 		} else if (os.contains("windows")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 			driver = new ChromeDriver();
