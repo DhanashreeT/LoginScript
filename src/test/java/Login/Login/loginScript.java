@@ -29,8 +29,8 @@ public class loginScript {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("–no-sandbox");
 			options.addArguments("–disable-dev-shm-usage");
-			options.setExperimentalOption("useAutomationExtension", false);
-			driver = new ChromeDriver(options);
+			options.setExperimentalOption(“useAutomationExtension”, false);
+			WebDriver driver = new ChromeDriver(options);
 			
 		} else if (os.contains("windows")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
