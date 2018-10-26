@@ -27,9 +27,9 @@ public class loginScript {
 		if (os.contains("linux")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_linux");
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+			
 			options.addArguments("--no-sandbox");
-			options.addArguments("--disable-dev-shm-usage");
+			
                         
 			driver = new ChromeDriver(options);
 			driver = new ChromeDriver();
