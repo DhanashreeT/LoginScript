@@ -27,7 +27,12 @@ public class loginScript {
 		if (os.contains("linux")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_linux");
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--no-zygote");
+			options.addArguments("--mute-audio")
+                        options.addArguments('--dns-prefetch-disable')
+           		options.addArguments('--lang=en-US')
+            		options.addArguments('--disable-setuid-sandbox')
+				
+			options.addArguments("--headless");
 			options.addArguments("--no-sandbox");
 			
                         
